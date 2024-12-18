@@ -133,4 +133,10 @@ public class UserServiceImp implements UserService {
         return requestMap.containsKey("Nom")&&requestMap.containsKey("Prenom")&&requestMap.containsKey("Email")&&requestMap.containsKey("Mdp")&&requestMap.containsKey("Role");
     }
 
+
+    @Override
+    public Boolean existsById(Long id) {
+        return UserRepo.existsById(id);
+    }
+
 }

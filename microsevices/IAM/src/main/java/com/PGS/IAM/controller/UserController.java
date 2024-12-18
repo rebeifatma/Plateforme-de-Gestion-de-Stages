@@ -10,13 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/api/v1/iam/")
 public class UserController  {
 
     @Autowired
@@ -33,6 +30,12 @@ public class UserController  {
             ex.printStackTrace();
         }return MessageUtils.getResponseEntity("SOME_THING_WENT_WRONG", HttpStatus.INTERNAL_SERVER_ERROR);
 
+    }
+
+    @GetMapping("/exists/{id}")
+    public ResponseEntity<Boolean> checkUserExists(@PathVariable Long id) {
+        Boolean exists = UserServ.existsById(id);
+        return ResponseEntity.ok(exists);
     }
 
 

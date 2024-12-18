@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DiscoveryServer" />
+        <module name="gateway" />
         <module name="ConfigServer" />
       </profile>
       <profile name="Annotation profile for IAM" enabled="true">
@@ -18,16 +19,17 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="IAM" />
-        <module name="Gestion-de-Favoris" />
       </profile>
-      <profile name="Annotation profile for Stage" enabled="true">
+      <profile name="Annotation profile for Gestion-de-Favoris" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+        <module name="mailing" />
         <module name="Stage" />
+        <module name="Gestion-de-Favoris" />
       </profile>
     </annotationProcessing>
   </component>
@@ -38,6 +40,8 @@
       <module name="Gestion-de-Favoris" options="-parameters" />
       <module name="IAM" options="-parameters" />
       <module name="Stage" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="mailing" options="-parameters" />
     </option>
   </component>
 </project>

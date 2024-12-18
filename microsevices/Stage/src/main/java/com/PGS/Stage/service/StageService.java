@@ -11,4 +11,5 @@ public interface StageService {
     public String scraperHiinterns();
     public List<StagePFE> getallPFE();
     public List<StageETE> getallETE();
+    public Boolean stageExistsById(Long  id);
 }

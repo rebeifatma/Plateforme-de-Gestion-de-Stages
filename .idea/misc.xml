@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/microsevices/IAM/pom.xml" />
         <option value="$PROJECT_DIR$/microsevices/Stage/pom.xml" />
         <option value="$PROJECT_DIR$/microsevices/Gestion-de-Favoris/pom.xml" />
+        <option value="$PROJECT_DIR$/microsevices/mailing/pom.xml" />
+        <option value="$PROJECT_DIR$/microsevices/gateway/pom.xml" />
       </list>
     </option>
   </component>

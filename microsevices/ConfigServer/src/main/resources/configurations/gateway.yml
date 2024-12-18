@@ -1,0 +1,43 @@
+server:
+  port: 8222  # Port pour API Gateway
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      import: optional:configserver:http://localhost:8888  # URL du Config Server
+    gateway:
+      discovery:
+        locator:
+          enabled: true   # Active la découverte des services via Eureka
+          lower-case-service-id: true
+      routes:
+        # Route pour gestiondefavoris-service
+        - id: gestiondefavoris-service
+          uri: lb://GESTIONDEFAVORIS
+          predicates:
+            - Path=/api/v1/favoris/**
+
+        # Route pour IAM service
+        - id: iam-service
+          uri: lb://IAM
+          predicates:
+            - Path=/api/v1/iam/**
+
+        # Route pour MAILING service
+        - id: mailing-service
+          uri: lb://MAILING
+          predicates:
+            - Path=/api/v1/mailing/**
+
+        # Route pour STAGE service
+        - id: stage-service
+          uri: lb://STAGE
+          predicates:
+            - Path=/api/v1/stage/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # URL du Discovery Server

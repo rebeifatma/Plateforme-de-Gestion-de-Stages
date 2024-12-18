@@ -7,5 +7,7 @@
     <file url="file://$PROJECT_DIR$/microsevices/IAM/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microsevices/Stage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microsevices/Stage/target/generated-sources/jaxb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microsevices/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microsevices/mailing/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -14,6 +14,7 @@ public class Societe extends User {
     @Column(name = "Emplacement")
     private String emplacement;
 
+
     // Constructeur par défaut
     public Societe() {
     }

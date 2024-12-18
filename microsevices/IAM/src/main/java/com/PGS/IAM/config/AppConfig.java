@@ -31,7 +31,7 @@ public class AppConfig {
                         management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize ->
                         authorize
-                                .requestMatchers("/api/**").authenticated() // API nécessite une authentification
+                                .requestMatchers("/api/v1/iam**").authenticated() // API nécessite une authentification
                                 .requestMatchers("/graphql", "/graphiql/**").permitAll() // GraphQL et GraphiQL accessibles sans authentification
                                 .anyRequest().permitAll() // Tout le reste est accessible
                 )

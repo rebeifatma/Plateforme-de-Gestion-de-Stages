@@ -112,4 +112,8 @@ public class StageServiceImp implements StageService {
     public List<StageETE> getallETE() {
         return ETErepo.findAll();
     }
+
+    public Boolean stageExistsById(Long  id) {
+        return stagerepo.existsById(id);
+    }
 }
