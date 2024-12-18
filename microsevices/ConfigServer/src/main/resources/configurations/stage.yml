@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: stage
+  datasource:
+    url: jdbc:mysql://localhost:3308/gestionfavoris  # Port 3308 pour MySQL WAMP
+    username: root                                  # Nom d'utilisateur par défaut de WAMP
+    password:                                       # Pas de mot de passe (vide)
+    driver-class-name: com.mysql.cj.jdbc.Driver     # Driver MySQL pour Spring Boot
+  jpa:
+    hibernate:
+      ddl-auto: update                              # Crée/Met à jour les tables automatiquement
+    show-sql: true                                  # Affiche les requêtes SQL dans la console
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"                                # Expose tous les endpoints Actuator

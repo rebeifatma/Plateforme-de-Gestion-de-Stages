@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-ialL
+    environment:
+      POSTGRES_USER: ala234
+      POSTGRES_PASSWORD: ala234
+      POSTGRES_DB: iam
+    ports:
+      - "5434:5432" # Port 5434 sur l'hôte mappé au port 5432 du conteneur
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - ial-network
+    restart: always  # Redémarre automatiquement en cas de problème
+
+volumes:
+  postgres-data:
+
+networks:
+  ial-network:
+    driver: bridge

@@ -1,0 +1,59 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tn="http://www.enicarthage.tn/stage"
+           targetNamespace="http://www.enicarthage.tn/stage"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetAllStagesRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetAllStagesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="stage" type="tn:stage" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetAllStagesPFERequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetAllStagesPFEResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="stage" type="tn:stage" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <xs:element name="GetAllStagesETERequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetAllStagesETEResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="stage" type="tn:stage" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <xs:complexType name="stage">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="titre" type="xs:string"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="duree" type="xs:string"/>
+            <xs:element name="img" type="xs:string"/>
+            <xs:element name="expiration" type="xs:string"/>
+            <xs:element name="necessarity" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
